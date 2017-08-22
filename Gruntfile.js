@@ -31,7 +31,7 @@ module.exports = function (grunt) {
         // }
         mkcouchdb: {
             demo: {
-                db: 'http://localhost:5984/stories2',
+                db: "http://localhost:5984/stories2",
                 options: {
                     okay_if_exists: true
                 }
