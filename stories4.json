@@ -1,0 +1,19 @@
+[
+    {
+        "_id": "_design/storiesDesignDoc",
+        "key": "_design/storiesDesignDoc",
+        "value": {
+            "rev": "2-eb72c5eae0713a95f5858d872512c1d6"
+        },
+        "doc": {
+            "_id": "_design/storiesDesignDoc",
+            "_rev": "2-eb72c5eae0713a95f5858d872512c1d6",
+            "views": {
+                "storyTags-view": {
+                    "map": "function(doc) {\r\n  if(doc.value.tags.length > 0) {\r\n    for(var idx in doc.value.tags) {\r\n      //emit(doc.value.tags[idx], null);\r\n      emit(doc.value.tags[idx], doc.value.title);\r\n    }\r\n  }\r\n}"
+                }
+            },
+            "language": "javascript"
+        }
+    }
+]
